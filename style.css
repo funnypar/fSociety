@@ -6,6 +6,8 @@
 :root {
   --clr-white: #fff;
   --clr-blue: #8aa29e;
+  --clr-gray: #464545;
+  --clr-black: #0d0a0b;
   --ff-catamaran: "Catamaran", sans-serif;
   --ff-grand: "Grand Hotel", cursive;
   --transition: all 0.3s linear;
@@ -22,7 +24,7 @@
 body {
   font-family: var(--ff-catamaran);
   background: var(--clr-white);
-  color: var(--clr-blue);
+  color: var(--clr-black);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -154,4 +156,59 @@ h2 {
     var(--clr-white),
     var(--clr-blue)
   );
+}
+
+/*
+============
+skills section
+============
+*/
+
+.skills {
+  background: var(--clr-gray);
+  color: var(--clr-white);
+}
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--transition);
+}
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  transition: var(--transition);
+  color: var(--clr-black);
+}
+.skill-text {
+  max-width: 17rem;
+  margin: 0 auto;
+}
+.skill:hover {
+  color: var(--clr-black);
+  background: var(--clr-white);
+  box-shadow: 0 2px var(--clr-blue);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skills {
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+  }
+  .skill {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills {
+    display: flex;
+    justify-content: baseline;
+  }
+  .skill {
+    width: 25%;
+  }
 }
