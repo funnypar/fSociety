@@ -8,6 +8,7 @@
   --clr-blue: #8aa29e;
   --clr-gray: #464545;
   --clr-black: #0d0a0b;
+  --clr-slowGray: #d5d5d5;
   --ff-catamaran: "Catamaran", sans-serif;
   --ff-grand: "Grand Hotel", cursive;
   --transition: all 0.3s linear;
@@ -85,6 +86,31 @@ p {
   }
 }
 
+.section-title h2 {
+  font-family: var(--ff-catamaran);
+  letter-spacing: var(--spacing);
+  color: var(--clr-white);
+}
+.section-title h3 {
+  font-family: var(--ff-grand);
+  color: var(--clr-blue);
+}
+.section-title {
+  margin-bottom: 2rem;
+}
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
 /* =============================================== Start CSS Codes ======================= */
 
 /*
@@ -210,5 +236,45 @@ skills section
   }
   .skill {
     width: 25%;
+  }
+}
+
+/*
+============
+about section
+============
+*/
+
+.about-img,
+.about-info {
+  padding: 2rem 0;
+}
+.about-img-container {
+  background: var(--clr-gray);
+  border: 0.5rem solid var(--clr-black);
+  max-width: 30rem;
+  /* extra */
+  overflow: hidden;
+}
+
+.about-picture {
+  transition: var(--transition);
+}
+
+.about-img-container:hover .about-picture {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+.about-text {
+  max-width: 26rem;
+  color: var(--clr-slowGray);
+}
+
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
   }
 }
