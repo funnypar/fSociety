@@ -7,6 +7,7 @@
   --clr-white: #fff;
   --clr-blue: #8aa29e;
   --clr-gray: #464545;
+  --clr-gray2: #333737;
   --clr-black: #0d0a0b;
   --clr-slowGray: #d5d5d5;
   --ff-catamaran: "Catamaran", sans-serif;
@@ -286,7 +287,7 @@ hacks
 */
 .hacks-section {
   background: var(--clr-gray);
-  height: 100vh;
+  /* height: 100vh; */
 }
 .hacks-text {
   color: var(--clr-white);
@@ -327,6 +328,9 @@ hacks
   }
 }
 @media screen and (min-width: 1200px) {
+  .hacks-section {
+    height: 100vh;
+  }
   .hacks-info {
     float: left;
     width: 30%;
@@ -338,5 +342,88 @@ hacks
   .hack {
     margin-bottom: 0;
     padding: 0 1rem;
+  }
+}
+
+/*
+============
+contact 
+============
+*/
+
+.contact {
+  background: var(--clr-gray2);
+  /* height: 100vh; */
+}
+.contact-form,
+.contact-info {
+  margin: 1rem 0;
+}
+.contact-item {
+  margin-bottom: 1.75rem;
+  padding: 1.5rem;
+}
+.contact-item h4 {
+  color: var(--clr-white);
+}
+.contact-title {
+  font-weight: 400;
+}
+.contact-text {
+  text-transform: uppercase;
+}
+.contact-form {
+  background: var(--clr-black);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 255, 255);
+  transition: var(--transition);
+  max-width: 35rem;
+}
+.contact-form:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: var(--clr-white);
+}
+.form-group {
+  padding: 1rem 1.5rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: var(--clr-blue);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-control::placeholder {
+  font-family: var(--ff-catamaran);
+  color: #000;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+}
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+@media screen and (min-width: 992px) {
+  .contact-form,
+  .contact-info {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    height: 35rem;
   }
 }
