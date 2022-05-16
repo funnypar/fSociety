@@ -307,6 +307,9 @@ hacks
   margin-bottom: 2rem;
   height: 17rem;
   object-fit: cover;
+  transition: var(--transition);
+}
+.hack-img:hover {
   box-shadow: 10px 10px rgb(197, 178, 178);
 }
 .hack-time {
@@ -426,4 +429,37 @@ contact
   .contact {
     height: 35rem;
   }
+}
+
+/*
+============
+footer 
+============
+*/
+.footer {
+  background: #222222;
+  text-align: center;
+}
+.social-icon {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  transition: var(--transition);
+}
+.social-icon:hover {
+  color: var(--clr-blue);
+}
+.footer-text {
+  color: #d5d5d5;
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.fsociety {
+  color: var(--clr-white);
+  font-weight: 700;
+  transition: var(--transition);
+}
+.fsociety:hover {
+  opacity: 0;
 }
