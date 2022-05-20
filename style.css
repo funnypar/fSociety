@@ -164,7 +164,9 @@ h2 {
   font-size: 0.875rem;
   border: none;
   box-shadow: 0 1px 10px;
+  border-radius: 50px;
 }
+
 .btn:hover {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -412,6 +414,17 @@ contact
   letter-spacing: var(--spacing);
 }
 .submit-btn {
+  text-transform: uppercase;
+  background: var(--clr-blue);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: none;
+  box-shadow: 0 1px 10px;
   display: block;
   width: 100%;
   padding: 1rem;
