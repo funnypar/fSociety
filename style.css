@@ -116,6 +116,72 @@ p {
 
 /*
 ============
+Animation
+============
+*/
+@keyframes mopanoBtn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes mopanoSlideRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes mopanoSlideLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes mopanoShowBtn {
+  0% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*
+============
 Navbar
 ============
 */
@@ -127,6 +193,8 @@ Navbar
   color: var(--clr-blue);
   z-index: 1;
   cursor: pointer;
+  /* Animation */
+  animation: mopanoBtn 2s ease infinite;
 }
 .navbar {
   position: fixed;
@@ -207,10 +275,11 @@ header
   left: 50%;
   transform: translate(-50%, -50%);
 }
-h2 {
+.banner h2 {
   font-family: var(--ff-grand);
   color: var(--clr-blue);
   /* animation */
+  animation: mopanoSlideRight 5s ease-in-out 1;
 }
 
 .banner h1 {
@@ -219,6 +288,7 @@ h2 {
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   /* animation */
+  animation: mopanoSlideLeft 5s ease-in-out 1;
 }
 .btn {
   text-transform: uppercase;
@@ -243,6 +313,8 @@ h2 {
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  /* animation */
+  animation: mopanoShowBtn 5s linear 1;
 }
 
 .content-divider {
